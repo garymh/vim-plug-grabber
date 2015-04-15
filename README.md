@@ -6,7 +6,7 @@ A handy mac service that lets you open a direct github link when you're browsing
 
 Installation/Usage:
 
-- [Download](https://raw.githubusercontent.com/garymh/vim-plug-grabber/master/vim-plug-grabber.workflow)
+- [Download](https://github.com/garymh/vim-plug-grabber/releases/download/1.0/vim-plug-grabber.workflow.zip)
 - Double click to install
 - In your Keyboard system preferences, go to the shortcuts tab
 - Click 'Services' and scroll till you see "vim-plug-grabber" under 'Text'
