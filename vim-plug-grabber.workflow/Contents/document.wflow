@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>409.2</string>
+	<string>419</string>
 	<key>AMApplicationVersion</key>
-	<string>2.5</string>
+	<string>2.6</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -59,8 +59,11 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>if ARGV.join(' ')[/'(.*?)'/]
-  system %Q{open "http://github.com/#{ARGV.join(' ')[/'(.*?)'/].gsub("'","")}"}
+					<string>regex = /"([^"\n]+\/[^"\n]+)"|'([^'\n]+\/[^'\n]+)'/
+url = ARGV.join('')
+
+if regex.match(url)
+  system %Q{open "http://github.com/#{regex.match(url).captures.compact.first}"}
 end</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
@@ -174,7 +177,7 @@ end</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>517.000000:253.000000</string>
+				<string>309.000000:315.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
